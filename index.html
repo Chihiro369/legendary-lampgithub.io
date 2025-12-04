@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予約フォーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>予約フォーム</h2>
+
+  <label>お名前</label>
+  <input type="text" id="name" placeholder="例：山田 太郎" required>
+
+  <label>メールアドレス</label>
+  <input type="email" id="email" placeholder="例：sample@example.com" required>
+
+  <label>予約日</label>
+  <input type="date" id="date" required>
+
+  <label>予約時間</label>
+  <select id="time"></select>
+
+  <label>プラン</label>
+  <select id="plan">
+    <option value="5000">Aプラン（5,000円）</option>
+    <option value="8000">Bプラン（8,000円）</option>
+    <option value="12000">Cプラン（12,000円）</option>
+  </select>
+
+  <label>オプション</label>
+  <div class="options">
+    <label><input type="checkbox" class="opt" value="1000"> オプション1（+1,000円）</label>
+    <label><input type="checkbox" class="opt" value="2000"> オプション2（+2,000円）</label>
+    <label><input type="checkbox" class="opt" value="3000"> オプション3（+3,000円）</label>
+  </div>
+
+  <div class="total-box">
+    合計金額：<span id="total">0</span>円
+  </div>
+
+  <label>説明欄</label>
+  <textarea id="note" placeholder="ご要望など"></textarea>
+
+  <button id="submit">予約する</button>
+
+  <p class="warning">※ 当日のキャンセルはプラン及びオプション料金の100%をお支払いいただきます。</p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
